@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="site.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body> 
+        <h1 class = "pagetitle">Kansas State Computer Science Standards</h1>
+        <ul>
+            <li class = "navbarlink" id = "homepage"><a href = "/">Homepage</a></li>
+            <li class = "navbarlink" id = "forums"><a href = "/forums">Forums</a></li>
+            <li class = "navbarlink" id = "csta"><a href="https://www.csteachers.org/">CSTA</a></li>
+        </ul>
+        <div class = "table">
+            <div class = "categories" id = "categories">
+                <div class="subcategory1">Identifier</div>
+                <div class="subcategory2">Standard</div>
+                <div class="subcategory3">Concept</div>
+                <div class="subcategory4">Subconcepts</div>
+                <div class="subcategory5">Practices</div>
+                <% standards.forEach(function(key) { %>
+                    <div class = "identifier"><%= key.identifier %></div>
+                    <div class = "description"><%= key.description %> <br/> <br/>
+                        <div class = "statement"><%= key.summary %></div>
+                    </div>
+                    <div class = "concepts"> <%= key.concept %> </div>
+                    <div class = "subconcept"> <%= key.subconcept %> </div>
+                    <div class = "practices"> <%= key.practices %> </div>
+                <% }) %>
+            </div>
+            <div class = "categoriesmobile" id = "categoriesmobile">  
+                <% standards.forEach(function(key) { %>
+                <div class = "wrapper">
+                    <div class = "identifiermo"><%= key.identifier + " " + key.description %></div>
+                    <div class = "summarymo hidden"><%= key.summary %> <br/> <br/></div>
+                    <div class = "conceptsmo hidden"> <%= "Concepts: " + key.concept %> <br/> <br/></div>
+                    <div class = "subconceptmo hidden"> <%= "Subconcepts: " + key.subconcept %> </div>
+                    <div class = "practicesmo hidden"> <%= "Practices: " + key.practices %> </div>
+                    <button class="dropdown hide"></button>
+                </div>
+                <% }) %>
+            </div>
+        <script type="text/javascript" src="site.js"></script>
+    </body>
+</html>

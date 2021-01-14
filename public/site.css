@@ -1,0 +1,327 @@
+/** site.js 
+ * You should add your CSS code to this file.  
+ * See the assignment description in Guide for what
+ * your code needs to accomplish.
+ */
+ body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-color: #333;
+ }
+
+ .formcontainer {
+   
+ }
+
+.categories {
+  display: grid;
+}
+.pagetitle {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.table {
+  display: table;
+  margin: 0 auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 13px;
+  text-align: center;
+}
+li {
+  display: inline;
+  font-size: 25px;
+}
+li a {
+  color: white;
+  padding: 13px 40px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #40f07b6e;
+}
+.subcategory1 {
+  grid-column: 1;
+  background-color: #40f07b6e;
+  text-align: left;
+}
+.subcategory2 {
+  grid-column: 2;
+  background-color: #40f07b6e;
+}
+.subcategory3 {
+  grid-column: 3;
+  background-color: #40f07b6e;
+}
+.subcategory4 {
+  grid-column: 4;
+  background-color: #40f07b6e;
+}
+.subcategory5 {
+  grid-column: 5;
+  background-color: #40f07b6e;
+}
+.rules {
+  grid-row-gap: auto;
+  grid-row: 1;
+}
+.identifier {
+  grid-column: 1;
+  border: 0.5px solid #40f07b6e;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.statement {
+  grid-column: 2;
+  font-style: italic;
+  color: white;
+  padding: 5px;
+}
+.description {
+  grid-column: 2;
+  text-decoration-color: #40f07b6e;
+  color: white;
+  border: 0.5px solid #40f07b6e;
+  padding: 5px;
+}
+.concepts {
+  grid-column: 3;
+  border: 0.5px solid #40f07b6e;
+  color: white;
+  padding: 5px;
+}
+.subconceptsheader {
+  grid-column: 4;
+  color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #40f07b6e;
+}
+.subconcept {
+  grid-column: 4;
+  color: white;
+  border: 0.5px solid #40f07b6e;
+  padding: 5px;
+}
+.practices {
+  grid-column: 5;
+  border: 0.5px solid #40f07b6e;
+  color: white;
+  padding: 5px;
+}
+.identifiermo {
+  display: none;
+  grid-column: 1;
+  border: none;
+  background-color: #40f07b6e;
+  font-weight: normal;
+  border-bottom: 0.5px solid #333;
+}
+.summarymo {
+  display: none;
+  grid-column: 1;
+  background-color: #40f07b6e;
+  font-style: italic;
+  text-decoration-color: lightgray;
+  border-bottom: 0.5px solid #333;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.conceptsmo {
+  display: none;
+  grid-column: 1;
+  background-color: #40f07b6e;
+  padding: 5px;
+}
+.subconceptmo {
+  display: none;
+  grid-column: 1;
+  border: none;
+  border-top: 0.5px solid #333;
+  border-bottom: 0.5px solid #333;
+}
+.practicesmo {
+  display: none;
+  grid-column: 1;
+  border-bottom: 0.5px solid #333;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: #40f07b6e;
+  text-decoration-color: lightgray;
+}
+.dropdown {
+  display: none;
+  text-align: left; 
+  background-color: #333;
+  border-bottom: 0.5px solid #333;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: white;
+}
+@media (max-width: 700px){
+  .categoriesmobile{
+    display: grid;
+  }
+  .wrapper {
+    display: grid;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 13px;
+    min-width: 369px;
+    text-align: center;
+  }
+  li {
+    display: inline;
+    font-size: 13px;
+  }
+  li a {
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+  }
+  .pagetitle {
+    color: white;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+  }
+  .subcategory1 {
+    display: none;
+  }
+  .subcategory2 {
+    display: none;
+  }
+  .subcategory3 {
+    display: none;
+    grid-column: 1;
+    grid-row: 3;
+    background-color: white;
+  }
+  .subcategory4 {
+    display: none;
+    grid-column: 1;
+    background-color: lightgray;
+  }
+  .subcategory5 {
+    display: none;
+  }
+  .identifiermo {
+    display: inline;
+    grid-column: 1;
+    border: none;
+    background-color: #40f07b6e;
+    border-bottom: 0.5px solid #333;
+  }
+  .summarymo {
+    display: none;
+    grid-column: 1;
+    color: white;
+    background-color: #333;
+    font-style: italic;
+    font-size: 13px;
+    padding-top: 5px;
+    text-decoration-color: lightgray;
+    border-bottom: 0.5px solid #40f07b6e;
+    border-left: 0.5px solid #40f07b6e;
+    border-right: 0.5px solid #40f07b6e;
+    border-top: none;
+  }
+  .conceptsmo {
+    display: none;
+    color: white;
+    font-size: 13px;
+    grid-column: 1;
+    background-color: #333;
+    border-bottom: 0.5px solid #40f07b6e;
+    border-left: 0.5px solid #40f07b6e;
+    border-right: 0.5px solid #40f07b6e;
+    padding: 5px;
+  }
+  .subconceptmo {
+    display: none;
+    color: white;
+    font-size: 13px;
+    grid-column: 1;
+    border: none;
+    background-color: #333;
+    border-bottom: 0.5px solid #40f07b6e;
+    border-left: 0.5px solid #40f07b6e;
+    border-right: 0.5px solid #40f07b6e;
+    padding: 5px;
+  }
+  .practicesmo {    
+    display: none;
+    color: white;
+    font-size: 13px;
+    grid-column: 1;
+    border-bottom: 0.5px solid #40f07b6e;
+    border-left: 0.5px solid #40f07b6e;
+    border-right: 0.5px solid #40f07b6e;
+    background-color: #333;
+    text-decoration-color: lightgray;
+    padding: 5px;
+  }
+  .dropdown {
+    display: inline;
+    text-align: left; 
+    background-color: #333;
+    border-bottom: 0.5px solid #333;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+  }
+   .lessbutton {
+    display: none;
+    text-align: left; 
+    background-color: #333;
+    border: 0.5px solid lightgray;
+    border-bottom: 0.5px solid #333;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+  }
+
+  .show {
+    display: inline;
+  }
+
+  .hide:before {
+    content: "more...";
+  }
+
+  .hide.active:before {
+    content: "less...";
+  }
+  .identifier {
+    display: none;
+  }
+  .statement {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+  .concepts {
+    display: none;
+  }
+  .subconcept {
+    display: none;
+  }
+  .practices {
+    display: none;
+  }
+}

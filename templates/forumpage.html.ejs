@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+    <head>
+        <link href="/forumpage.css" type = "text/css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body> 
+        <header class = "login">
+        <% if(locals.user) { %>
+          Welcome <%= user.first %>!
+          <% if(locals.user.role !== null) { %>
+            <a href="/forums/topics/new" class="loginbutton">Create a Topic</a>
+          <a href="/signout" class="loginbutton">Sign Out</a>
+          <% } %>
+        <% } else { %>
+          <a href="/signin" class="loginbutton">Sign In</a> 
+          <a href="/signup" class="loginbutton">Sign Up</a>
+        <% } %>
+        </header>
+        <h1 class = "pagetitle">Kansas State Computer Science Standards</h1>
+        <ul>
+            <li class = "navbarlink" id = "homepage"><a href = "/">Homepage</a></li>
+            <li class = "navbarlink" id = "forums"><a href = "/standards">Standards</a></li>
+            <li class = "navbarlink" id = "csta"><a href="https://www.csteachers.org/">CSTA</a></li>
+        </ul>
+      <div>
+        <%- post %>
+        <%- list %>
+      </div>
+    </body>
+</html>

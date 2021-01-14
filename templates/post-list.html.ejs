@@ -1,0 +1,12 @@
+<div>
+        <div class = "postsgridheader">
+          <div class="postrowh">Post</div>
+          <div class="postrowh">Author</div>
+        </div>
+  <% posts.forEach(function(post) { %>
+  <div class = "postsgrid">
+        <div class="postrow"><%= post.body %></div>
+        <div class="postrow"><%= post.author %></div>  
+  </div>
+ <% }); %>
+</div>

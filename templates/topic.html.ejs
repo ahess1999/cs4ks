@@ -1,0 +1,8 @@
+<div>
+  <% if(locals.user) { %>
+  <% if(locals.user.role !== null) { %>
+    <a href="/forums/topic/<%= id %>/new" class="createpost">Create Post</a>
+  <% } %>
+  <% } %>
+  <h1 class="topicsubject">Topic: <%= title %></h1>
+</div>

@@ -1,0 +1,18 @@
+<div>
+          <div class = "topicsgridheader">
+          <div class="rowh">Subject</div>
+          <div class="rowh">Author</div>
+          <div class="rowh">Posts</div>
+          <div class="rowh">Date Created</div>
+        </div>
+<% topics.forEach(function(topic) { %>
+<a href="/forums/topic/<%=topic.id %>">
+<div class = "topicsgrid">
+        <div class="row"><%= topic.subject %></div>
+        <div class="row"><%= topic.username %></div>  
+        <div class="row"><%= topic.postCount %></div>
+        <div class="row"><%= topic.date %></div>
+  </div>
+</a>
+  <% }); %>
+</div>
